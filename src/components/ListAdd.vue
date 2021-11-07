@@ -19,7 +19,23 @@ export default {
   data() {
     return {
       title: '',
+      isEding: false,
     }
+  },
+  computed: {
+    classList() {
+      const classList = ['addList']
+      if (this.isEding) {
+        classList.push('active')
+      }
+      if (this.titleExists) {
+        classList.push('addable')
+      }
+      return classList
+    },
+    titleExists() {
+      return this.title.length > 0
+    },
   },
   methods: {
     addList() {
