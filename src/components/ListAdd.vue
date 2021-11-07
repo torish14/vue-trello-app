@@ -1,11 +1,13 @@
 <template>
   <div>
-    <form class="addList" @submit.prevent="addList">
+    <form :class="classList" @submit.prevent="addList">
       <input
         v-model="title"
         type="text"
         class="text-input"
         placeholder="Add new list"
+        @focusin="startEding"
+        @focusout="finishEding"
       />
       <button class="add-button" type="submit">Add</button>
     </form>
@@ -25,6 +27,12 @@ export default {
         title: this.title,
       })
       this.title = ''
+    },
+    startEding() {
+      this.isEding = true
+    },
+    finishEding() {
+      this.isEding = false
     },
   },
 }
