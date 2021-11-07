@@ -9,7 +9,13 @@
         @focusin="startEding"
         @focusout="finishEding"
       />
-      <button class="add-button" type="submit">Add</button>
+      <button
+        v-if="isEding || titleExists"
+        class="add-button"
+        type="submit"
+      >
+        Add
+      </button>
     </form>
   </div>
 </template>
@@ -25,6 +31,7 @@ export default {
   computed: {
     classList() {
       const classList = ['addList']
+
       if (this.isEding) {
         classList.push('active')
       }
