@@ -1,6 +1,7 @@
 <template>
   <div>
     <header>Vue Trello App</header>
+<<<<<<< HEAD
 <<<<<<< Updated upstream
     <main><p class="info-line">All: 0 tasks</p></main>
 =======
@@ -17,20 +18,31 @@
       </div>
     </main>
 >>>>>>> Stashed changes
+=======
+    <main>
+      <p class="info-line">All: 0 tasks</p>
+      <ListAdd />
+    </main>
+>>>>>>> list_add_component_#2
   </div>
 </template>
 
 <script>
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 export default {}
 =======
 import ListAdd from './ListAdd'
 import List from './List'
 import { mapState } from 'vuex'
+=======
+import ListAdd from './ListAdd'
+>>>>>>> list_add_component_#2
 
 export default {
   components: {
     ListAdd,
+<<<<<<< HEAD
     List,
   },
   computed: {
@@ -38,4 +50,8 @@ export default {
   },
 }
 >>>>>>> Stashed changes
+=======
+  },
+}
+>>>>>>> list_add_component_#2
 </script>
