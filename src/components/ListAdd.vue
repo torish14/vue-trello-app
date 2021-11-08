@@ -6,11 +6,11 @@
         type="text"
         class="text-input"
         placeholder="Add new list"
-        @focusin="startEding"
-        @focusout="finishEding"
+        @focusin="startEditing"
+        @focusout="finishEditing"
       />
       <button
-        v-if="isEding || titleExists"
+        v-if="isEditing || titleExists"
         class="add-button"
         type="submit"
       >
@@ -25,14 +25,14 @@ export default {
   data() {
     return {
       title: '',
-      isEding: false,
+      isEditing: false,
     }
   },
   computed: {
     classList() {
       const classList = ['addList']
 
-      if (this.isEding) {
+      if (this.isEditing) {
         classList.push('active')
       }
       if (this.titleExists) {
@@ -51,11 +51,11 @@ export default {
       })
       this.title = ''
     },
-    startEding() {
-      this.isEding = true
+    startEditing() {
+      this.isEditing = true
     },
-    finishEding() {
-      this.isEding = false
+    finishEditing() {
+      this.isEditing = false
     },
   },
 }
