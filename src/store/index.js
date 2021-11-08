@@ -3,6 +3,7 @@ import Vuex from 'vuex'
 
 Vue.use(Vuex)
 
+<<<<<<< Updated upstream
 const savedLists = localStorage.getItem('trello-lists')
 
 const store = new Vuex.Store({
@@ -35,6 +36,13 @@ const store = new Vuex.Store({
       context.commit('addList', payload)
     },
   },
+=======
+export default new Vuex.Store({
+  state: {},
+  mutations: {},
+  actions: {},
+  modules: {},
+>>>>>>> Stashed changes
 })
 
 store.subscribe((mutation, state) => {
