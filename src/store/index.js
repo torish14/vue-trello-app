@@ -3,9 +3,6 @@ import Vuex from 'vuex'
 
 Vue.use(Vuex)
 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 const savedLists = localStorage.getItem('trello-lists')
 
 const store = new Vuex.Store({
