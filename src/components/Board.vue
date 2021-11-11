@@ -1,7 +1,6 @@
 <template>
   <div>
     <header>Vue Trello App</header>
-    <main><p class="info-line">All: 0 tasks</p></main>
     <main>
       <p class="info-line">All: 0 tasks</p>
       <div class="list-index">
